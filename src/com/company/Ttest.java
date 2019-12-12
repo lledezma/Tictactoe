@@ -3,8 +3,6 @@ import java.util.*;
 
 public class Ttest
 {
-
-
     public static void main(String[] args)
     {
         char Player;                            // player indetifiers
