@@ -5,7 +5,7 @@ public class Ttest
 {
 
 
-    public static void main(String[] args)
+    public static void main(String args[])
     {
         char Player;                            // player indetifiers
         int X = 1;                           //X example coordinate
