@@ -11,8 +11,6 @@ public class Ttest
         char [][]GameBoard = new char[3][3];    // Gameboard
         Scanner scan = new Scanner(System.in);
         int a;                                  // game continuity verifier
-
-
         System.out.println("This is a Tictactoe game just like a classic tictactoe game. With a 3x3 gameboard. \n"
                 + "You can only choose between x and o as an identifier. \n"
                 + "if you choose anything but that, you will be asked to enter x or o again. \n"
@@ -36,7 +34,6 @@ public class Ttest
                     System.out.print("| ");
                 System.out.print(GameBoard[i][j] + " | ");
             }
-
         }
         System.out.println();
         Tictactoe TicTacToe = new Tictactoe(Player);                                        // Tictactoe game

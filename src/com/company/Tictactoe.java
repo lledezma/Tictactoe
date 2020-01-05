@@ -12,14 +12,12 @@ public class Tictactoe
     {
         Player1 = P1move;
     }
-
     public char getPlayer1()                           //returns player1 identifier
     {
         return Player1;
     }
-
     public void game()                                 // Game
-    {
+    { 
         boolean gameplay = true;
 
         for(int i = 0; i < 3; i++)                     //board
@@ -27,18 +25,14 @@ public class Tictactoe
             for(int j = 0; j < 3; j++)
                 GameBoard[i][j] = ' ';
         }
-
-
         while(gameplay)                               //game process
         {
             moves();                                    //players moves
-
             Board();
             if(Player1 == 'x')
                 Player1 = 'o';
             else
                 Player1 = 'x';
-
             // checks win
             if(GameBoard[0][X] == GameBoard[1][X]
                     && GameBoard[0][X] == GameBoard[2][X])
@@ -52,31 +46,22 @@ public class Tictactoe
             if(GameBoard[0][2] == GameBoard[1][1] && GameBoard[0][2] == GameBoard[2][0]
                     && GameBoard[1][1] != ' ')
                 gameplay = false;
-
             //if either player gets a mark in all four corners of the board, that player wins.
             if((GameBoard[0][0] == GameBoard[0][2] && GameBoard[0][0] == GameBoard[2][2]
                     && GameBoard[0][0] == GameBoard[2][0])
-
-
                     &&   (((GameBoard[0][X] == 'o') || (GameBoard[0][X] == 'x'))&&
                     ((GameBoard[2][X] == 'x') || (GameBoard[2][X] == 'o'))&&
                     ((GameBoard[Y][0] == 'x') || (GameBoard[Y][0] == 'o'))&&
                     ((GameBoard[Y][2] == 'x') || (GameBoard[Y][2] == 'o'))))
-
-
                 gameplay = false;
-
-
             if(gameplay == true)
                 System.out.print("Next player, ");
             else if(gameplay == false && Player1 == 'o')
                 System.out.println("Player x wins!");
             else if(gameplay == false && Player1 == 'x')
                 System.out.println("Player o wins!");
-
         }
     }
-
     public void moves()                          //players' moves
     {
         do{
@@ -89,11 +74,9 @@ public class Tictactoe
 
     public void Board()                     // prints 3x3 tictactoe board
     {
-        for(int i = 0; i < 3; i++)
-        {
+        for(int i = 0; i < 3; i++) {
             System.out.println();
-            for(int j = 0; j < 3; j++)
-            {
+            for(int j = 0; j < 3; j++) {
                 if(j == 0)
                     System.out.print("| ");
                 System.out.print(GameBoard[i][j] + " | ");
@@ -101,5 +84,4 @@ public class Tictactoe
         }
         System.out.println();
     }
-
 }
